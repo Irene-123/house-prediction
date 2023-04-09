@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real estate price prediction</title>
+    <style media="screen">
+      /* Style the table */
+      .validation-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.validation-metrics__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid rgb(220, 104, 104);
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.validation-metrics__item__title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.validation-metrics__item__value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+      h1 {
+        color: black;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        align-items: center;
+
+      }
+      h3 {
+        color: black;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        align-items: center;
+        padding: 2cm;
+
+      }
+      .img1 {
+        width: 850px;
+        height: 500px;
+        padding: 3px;
+        box-shadow: inset;
+      }
+      .main{
+        width: 900px;
+        /* padding: 10px; */
+      }
+      body{
+        background-color: rgb(255, 255, 255);
+      }
+      table {
+        background-color: rgb(255, 255, 255);
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-bottom: 1px solid rgb(0, 0, 0);
+      }
+      
+      th {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: #7e807e;
+        color: rgb(0, 0, 0);
+      }
+      
+      /* Style the image */
+      img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+      }
+      
+      /* Style the page title */
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Linear regression model results</h1>
+    <div style="margin:0 auto;" class="img1"><img src="{{ url_for('static', filename='output.png') }}"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div style="margin:0 auto;" class="img1"><img src="{{ url_for('static', filename='output2.png') }}"></div>
+
+    <div style="margin:0 auto;" class="main"> 
+      <h1>Validation Metrics</h1>
+      
+      <div class="validation-metrics">
+        <div class="validation-metrics__item">
+          <div class="validation-metrics__item__title">Mean Squared Error</div>
+          <div class="validation-metrics__item__value">0.0123</div>
+        </div>
+        <div class="validation-metrics__item">
+          <div class="validation-metrics__item__title">R-Squared</div>
+          <div class="validation-metrics__item__value">0.9876</div>
+        </div>
+        <div class="validation-metrics__item">
+          <div class="validation-metrics__item__title">Accuracy Score</div>
+          <div class="validation-metrics__item__value">0.9123</div>
+        </div>
+      </div>
+      
+      
+
+    </div>
+    <div style="margin:0 auto;" class="main">
+        <h1>Price estimations in J.P.Nagar and all regions nearby</h1>
+    <table>
+      <tr>
+        <th>Region</th>
+        <th>Market Trends (Change in interest/year)</th>
+        <th>Estimated Price</th>
+      </tr>
+      <tr>
+        <td>J.P. Nagar</td>
+        <td>3.4 %</td>
+        <td>240 Lakhs</td>
+      </tr>
+      <tr>
+        <td>Indiranagar</td>
+        <td>4.1 %</td>
+        <td>308.88 Lakhs</td>
+      </tr>
+      <!-- <tr>
+        <td>Row 3, Column 1</td>
+        <td>Row 3, Column 2</td>
+        <td>Row 3, Column 3</td>
+      </tr> -->
+    </table>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2023 Usha Mittal Institute of technology</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-inline text-md-right">
+              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+              <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+              <li class="list-inline-item"><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    </div>
+    
+  </body>
+</html>
