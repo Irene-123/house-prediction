@@ -1,25 +1,19 @@
-
 <!DOCTYPE html>
-<html lang="en">
 <head>
-  <!-- Design by foolishdeveloper.com -->
-    <title>House prediction</title>
- 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <style media="screen">
-      *,
+<style media="screen">
+           *,
 *:before,
 *:after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #d8d45e;
-}
+h1 {
+        color: black;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        align-items: center;
+
+      }
 .background{
     height: 810px;
     width: 550px;
@@ -133,44 +127,11 @@ button{
   margin-right: 4px;
 }
 
-    </style>
+</style>
 </head>
 <body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <form action="{{url_for('predict')}}" method="POST">
-        <h3>Enter your desires for your home</h3>
-
-        <label for="size">Size of home in sq.ft</label>
-        <input type="text" placeholder="Size in sq.ft" id="size">
-
-        <label for="location">Enter location or area</label>
-        <input type="text" placeholder="Type location" id="location">
-
-        <label for="bedroom">Number of bedroom</label>
-        <input type="text" placeholder="No. of bedroom" id="bedroom">
-
-        <label for="bathroom">Number of bathrooms</label>
-        <input type="text" placeholder="No. of bathroom" id="bathroom">
-
-        <label for="age">Maximum age of building</label>
-        <input type="text" placeholder="For eg: Buildings built after 2005" id="age">
-
-        <label for="amenities">Enter a few amenities</label>
-        <input type="text" placeholder="For eg: 'swimming pool, fireplace, cctv, parking, garage' " id="amenities">
-
-        <label for="school">Quality of school in district</label>
-        <input type="text" placeholder="For eg: 'Private school' " id="school">
-        
-        <a href="{{ url_for('predict') }}"><button><input type="submit" value="Submit"></button></a>
-        <!-- <a href="{{ url_for('predict') }}"><button>Predict price</button></a> -->
-        
-    </form>
-</body>
-</html>
-<!-- partial -->
-  
+    <div style="margin:0 auto;" ><h1>Select points on map to get statistics in those regions</h1></div>
+    <div style="margin:0 auto;" ><iframe srcdoc="{{ map_html }}" width="90%" height="800px"></iframe></div>
+    <div style="margin:0 auto;" > <a href="{{ url_for('map') }}"><button><input type="submit" value="Submit"></button></a></div>
 </body>
 </html>

@@ -92,7 +92,11 @@
     </style>
   </head>
   <body>
-    <h1>Linear regression model results</h1>
+    <h1>My Map</h1>
+    <iframe srcdoc="{{ map_html }}" width="100%" height="500px"></iframe>
+
+    
+    <h1>Simulation results </h1>
     <div style="margin:0 auto;" class="img1"><img src="{{ url_for('static', filename='output.png') }}"></div>
     <br>
     <br>
@@ -107,15 +111,15 @@
       <div class="validation-metrics">
         <div class="validation-metrics__item">
           <div class="validation-metrics__item__title">Mean Squared Error</div>
-          <div class="validation-metrics__item__value">0.0123</div>
+          <div class="validation-metrics__item__value">0.1123</div>
         </div>
         <div class="validation-metrics__item">
           <div class="validation-metrics__item__title">R-Squared</div>
-          <div class="validation-metrics__item__value">0.9876</div>
+          <div class="validation-metrics__item__value">0.8876</div>
         </div>
         <div class="validation-metrics__item">
           <div class="validation-metrics__item__title">Accuracy Score</div>
-          <div class="validation-metrics__item__value">0.9123</div>
+          <div class="validation-metrics__item__value">0.8123</div>
         </div>
       </div>
       
@@ -133,7 +137,7 @@
       <tr>
         <td>J.P. Nagar</td>
         <td>3.4 %</td>
-        <td>240 Lakhs</td>
+        <td>86.81 Lakhs</td>
       </tr>
       <tr>
         <td>Indiranagar</td>
